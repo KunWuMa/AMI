@@ -1,0 +1,28 @@
+from pathlib import Path
+import pandas as pd,numpy as np,json,hashlib
+P=Path(__file__).resolve().parents[1];V=P/'私有数据';PV=V/'补充实验';O=P/'结果/补充实验';S=20261014
+B=pd.read_pickle(V/'MIMIC_index_cohort.pkl');B['sid']='M'+B.hadm_id.astype(str);B['pid']='M'+B.subject_id.astype(str);B['source']='MIMIC';B['year']=np.nan;B['admit_time']=B.admit;B['discharge_time']=B.discharge
+A=pd.read_pickle(V/'CAD_index_cohort.pkl');A['deathtime']=pd.NaT
+U=pd.read_pickle(V/'MIMIC_common_labs.pkl');U['sid']='M'+U.hadm_id.astype(str);L=pd.read_pickle(V/'CAD_common_labs.pkl');L=L.merge(A[['sid','D0']],on='sid',validate='many_to_one');L['chart']=L.D0+pd.to_timedelta(L.day,unit='D');L['available']=L.chart
+lo=B.anchor_year_group.str.extract(r'^(\d{4})')[0].astype(int);hi=B.anchor_year_group.str.extract(r'(\d{4})$')[0].astype(int);shift=B.admit.dt.year-B.anchor_year;B['admit_year_lower']=lo+shift;B['admit_year_upper']=hi+shift
+B[['sid','pid','anchor_year_group','admit_year_lower','admit_year_upper','admit_time','discharge_time','deathtime','D0','landmark','ICU_any','CABG_any','type2_or_other_MI']].to_csv(PV/'MIMIC_timing_metadata.csv.gz',index=False)
+cols=['sid','pid','source','age','male','AMI','year','D0','admit_time','discharge_time','deathtime','ICU_any','CABG_any','type2_or_other_MI'];ALL=pd.concat([B[cols],A[cols]],ignore_index=True);RAW=pd.concat([U[['sid','chart','available','variable','value_std']],L[['sid','chart','available','variable','value_std']]],ignore_index=True);VARS=['hb','cr','alb','wbc','platelet','na','k','glucose']
+flows=[];audits={}
+def build(c,landmark,end,name):
+ c=c.copy();c['landmark_new']=landmark;c['end_new']=end;death=pd.to_datetime(c.deathtime,errors='coerce');c=c[c.discharge_time.gt(c.landmark_new)&(death.isna()|death.gt(c.landmark_new))].copy();g=RAW.merge(c[['sid','D0','landmark_new','end_new','discharge_time','deathtime']],on='sid',validate='many_to_one');death=pd.to_datetime(g.deathtime,errors='coerce');g=g[g.chart.ge(g.D0)&g.chart.lt(g.end_new)&g.chart.le(g.discharge_time)&(death.isna()|g.chart.le(death))].copy();e=g[g.chart.lt(g.landmark_new)&g.available.lt(g.landmark_new)].copy();f=g[g.chart.ge(g.landmark_new)].copy();e['feature_day']=e.available.dt.normalize();c=c.set_index('sid',drop=False);c['cut']=np.where(c.male.eq(1),130,120)
+ day=e.groupby(['sid','variable','feature_day']).value_std.median().dropna().rename('value').reset_index();last=day.sort_values('feature_day').drop_duplicates(['sid','variable'],keep='last').pivot(index='sid',columns='variable',values='value');first=day.sort_values('feature_day').drop_duplicates(['sid','variable'],keep='first').pivot(index='sid',columns='variable',values='value');counts=day.groupby(['sid','variable']).size().unstack()
+ for v in VARS:c['last_'+v]=last[v].reindex(c.index) if v in last else np.nan;c['n_days_'+v]=counts[v].reindex(c.index).fillna(0) if v in counts else 0
+ c['first_hb']=first.hb.reindex(c.index);c['delta_hb']=c.last_hb-c.first_hb;c['last_margin']=c.last_hb-c.cut
+ eh=e[e.variable.eq('hb')].groupby('sid').value_std.agg(['min','count','size']);c['early_min_hb']=eh['min'].reindex(c.index);c['eligible']=(c.early_min_hb.ge(c.cut)&eh['count'].eq(eh['size']).reindex(c.index).fillna(False));fh=f[f.variable.eq('hb')].groupby('sid').value_std.agg(['min','count']);c['late_min_hb']=fh['min'].reindex(c.index);c['y']=np.where(c.eligible&c.late_min_hb.notna(),c.late_min_hb.lt(c.cut).astype(float),np.nan);assert c.pid.is_unique;assert e.available.lt(e.landmark_new).all() and e.chart.lt(e.landmark_new).all();assert f.chart.ge(f.landmark_new).all();c.reset_index(drop=True).to_csv(PV/(name+'_cohort.csv.gz'),index=False)
+ for src,sub in c.groupby('source'):
+  for grp,cc in [('all_ACS',sub),('AMI',sub[sub.AMI])]:flows.append({'experiment':name,'source':src,'group':grp,'still_in_hospital':len(cc),'early_normal':int(cc.eligible.sum()),'observed':int(cc.y.notna().sum()),'events':int(cc.y.sum()),'unknown':int((cc.eligible&cc.y.isna()).sum())})
+ audits[name]={'one_patient_one_index':True,'features_available_before_landmark':True,'outcome_draws_after_landmark':True,'new_cohort_sha256':hashlib.sha256((PV/(name+'_cohort.csv.gz')).read_bytes()).hexdigest()}
+ return c
+build(ALL,ALL.D0+pd.Timedelta(days=3),ALL.D0+pd.Timedelta(days=8),'D3_calendar')
+build(B[cols],B.admit_time+pd.Timedelta(hours=48),B.admit_time+pd.Timedelta(hours=168),'strict48h')
+pd.DataFrame(flows).to_csv(O/'timing_cohort_flow.csv',index=False)
+D=pd.read_csv(V/'harmonized_cohort.csv.gz');D=D[D.eligible].copy();post=RAW.merge(ALL[['sid','D0','discharge_time']],on='sid',validate='many_to_one');post['day']=(post.chart.dt.normalize()-post.D0).dt.days;post=post[post.variable.eq('hb')];out=D[['sid','source','AMI','y']].copy().set_index('sid')
+for upper in [3,5]:
+ v=post[post.day.between(2,upper)].groupby('sid').value_std.min().reindex(out.index);cut=D.set_index('sid').cut.reindex(out.index);out['y_D2D'+str(upper)]=np.where(v.notna(),v.lt(cut).astype(float),np.nan)
+f=post[post.day.between(2,7)&post.available.lt(post.D0+pd.Timedelta(days=8))&post.available.le(post.discharge_time)];v=f.groupby('sid').value_std.min().reindex(out.index);out['y_reported_in_window']=np.where(v.notna(),v.lt(cut).astype(float),np.nan);pending=U[U.variable.eq('hb')&U.day.le(1)&U.available.ge(U.landmark)].sid.unique();out['pending_early_Hb']=out.index.isin(pending);out.reset_index().to_csv(PV/'timing_fixed_label_sensitivities.csv.gz',index=False)
+(O/'09_preparation_complete.json').write_text(json.dumps({'complete':True,'audits':audits,'flows':flows,'no_new_raw_data':True,'CAD_strict_48h_not_available':True,'strict48h_horizon_hours':120,'temporal_split_uses_inferred_year_ranges_not_shifted_years':True},indent=2),encoding='utf8');print('PREPARATION_COMPLETE')

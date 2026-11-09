@@ -1,0 +1,12 @@
+file,source_file,role,rows
+unchanged_public_nonCABG_model_metrics.csv,public_development/aggregate_results/nonCABG_model_metrics.csv,public development analysis; frozen results used for evaluation,12
+unchanged_public_development_bootstrap_intervals.csv,public_development/aggregate_results/development_bootstrap_intervals.csv,public development analysis; frozen results used for evaluation,12
+unchanged_public_development_bootstrap_metrics.csv,public_development/aggregate_results/development_bootstrap_metrics.csv,public development analysis; frozen results used for evaluation,1200
+unchanged_public_development_bootstrap_paired_intervals.csv,public_development/aggregate_results/development_bootstrap_paired_intervals.csv,public development analysis; frozen results used for evaluation,12
+unchanged_public_repeated_split_summary.csv,public_development/aggregate_results/repeated_split_summary.csv,public development analysis; frozen results used for evaluation,8
+unchanged_public_repeated_split_metrics.csv,public_development/aggregate_results/repeated_split_metrics.csv,public development analysis; frozen results used for evaluation,160
+unchanged_public_strict48h_metrics.csv,public_development/aggregate_results/strict48h_metrics.csv,public development analysis; frozen results used for evaluation,8
+unchanged_public_strict48h_intervals.csv,public_development/aggregate_results/strict48h_intervals.csv,public development analysis; frozen results used for evaluation,12
+unchanged_public_MIMIC_period_metrics.csv,public_development/aggregate_results/MIMIC_period_metrics.csv,public development analysis; frozen results used for evaluation,8
+unchanged_public_MIMIC_period_intervals.csv,public_development/aggregate_results/MIMIC_period_intervals.csv,public development analysis; frozen results used for evaluation,12
+unchanged_public_iterative_imputation_metrics.csv,public_development/aggregate_results/iterative_imputation_metrics.csv,public development analysis; frozen results used for evaluation,6

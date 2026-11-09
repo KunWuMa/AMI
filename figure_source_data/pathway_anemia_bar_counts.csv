@@ -1,0 +1,4 @@
+population,pathway,n,events,fraction
+all_observed,CABG,379,367,0.9683377308707124
+all_observed,PCI_without_CABG,1024,317,0.3095703125
+all_observed,no_CABG_or_PCI_code,443,155,0.34988713318284426

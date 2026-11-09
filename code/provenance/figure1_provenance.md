@@ -1,0 +1,5 @@
+# Figure 1 provenance
+
+An OpenAI image-generation tool produced a layout draft on 27 October 2026 from documented methods and aggregate counts. The interface did not disclose a model-version identifier. No patient-level records were supplied. The final published figure is a Python vector drawing, not the generated bitmap. Its final-cohort layout is defined by presentation/draw_framework_vector.py. The schematic summarizes the D2 landmark, frozen public development and calibration, public/local assessment, and primary/exploratory/supporting evaluation levels.
+
+The accompanying prompt is a historical figure-prototyping record. Its interim component split was not included in the final scientific figure; final analyses use the unified Local100 cohort, not two independent validation samples. The published vector script and manuscript define the final scientific content. Author review and accountability remain required; this provenance note does not certify that author review has been completed.

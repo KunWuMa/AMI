@@ -1,0 +1,3 @@
+﻿cohort,N,max_abs_probability_reconstruction_error,clipped_patients,passed
+Public_test,370,2.220446049250313e-16,0,True
+Local100,100,3.3306690738754696e-16,0,True

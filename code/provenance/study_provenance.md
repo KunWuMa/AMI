@@ -1,0 +1,5 @@
+# Study provenance and interpretation
+
+The local dataset was completed during study development before first submission. Final manuscript analyses use one complete eligible hospital cohort: 116 early-normal patients, 100 outcome-observed patients and 46 recorded anemia events. Public-fitted primary models, preprocessing and public calibration remained unchanged. Care-pathway and observation-representation analyses were exploratory and post-hoc, informed by earlier local results; they were not used to refit the primary models or select a validated replacement. Local updating is separately labeled and evaluated with out-of-fold predictions.
+
+The source archive retains execution history. Release scripts omit component-specific displays and internal reports; this editorial curation did not rerun models or alter retained numerical results. Original scientific code retains protected historical input paths and output names where needed to resolve dependencies. A filename containing a historical execution label does not denote a new scientific analysis.

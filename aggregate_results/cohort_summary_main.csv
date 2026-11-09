@@ -1,0 +1,10 @@
+variable,label,Public_AMI,Public_test,Local_AMI
+eligible,"Early-normal eligible, n",1934,388,116
+O,"Future Hb observed, n (%)",1846/1934 (95.4),370/388 (95.4),100/116 (86.2)
+A,"Conditional anemia, events/observed (%)",839/1846 (45.4),168/370 (45.4),46/100 (46.0)
+J,"Joint recorded event, events/eligible (%)",839/1934 (43.4),168/388 (43.3),46/116 (39.7)
+age,"Age, years",66.0 (56.0--74.0),64.0 (54.2--72.8),63.5 (54.0--73.2)
+male,"Male, n (%)",1294 (70.1),257 (69.5),82 (82.0)
+last_hb,"Early Hb, g/L",139.0 (132.0--147.0),139.0 (132.0--146.8),139.0 (133.0--147.0)
+last_alb,"Albumin measured, n (%)",454/1846 (24.6),95/370 (25.7),97/100 (97.0)
+n_days_hb,"Two early Hb days, n (%)",559/1846 (30.3),122/370 (33.0),15/100 (15.0)

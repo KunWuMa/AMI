@@ -1,0 +1,53 @@
+{
+  "local_primary_AMI_regex": "急性.*心肌梗死|急性.*心梗",
+  "local_primary_ACS_regex": "AMI OR 不稳定.*心绞痛|急性冠脉|急性冠状动脉",
+  "local_suspected_exclusion_regex": "疑似|待排|[?？]",
+  "public_primary_AMI": {
+    "ICD9_prefix": [
+      "410"
+    ],
+    "ICD10_prefix": [
+      "I21",
+      "I22"
+    ]
+  },
+  "public_primary_UA": {
+    "ICD9": [
+      "4111"
+    ],
+    "ICD10": [
+      "I200"
+    ]
+  },
+  "index_selection": "First adult primary ACS admission per person before laboratory/outcome eligibility",
+  "local_laboratory_names": {
+    "hb": [
+      "血红蛋白"
+    ],
+    "cr": [
+      "肌酐",
+      "肌酐（氧化酶法）"
+    ],
+    "alb": [
+      "白蛋白",
+      "白蛋白(溴甲酚绿法)"
+    ],
+    "wbc": [
+      "白细胞"
+    ],
+    "platelet": [
+      "血小板计数"
+    ],
+    "na": [
+      "钠"
+    ],
+    "k": [
+      "钾"
+    ],
+    "glucose": [
+      "葡萄糖"
+    ]
+  },
+  "local_excluded_specimen_or_group_regex": "血气|尿|脑脊液|胸水|腹水|透析液",
+  "note": "Automated phenotypes, not completed clinical adjudication; UTF-8 original strings retained."
+}

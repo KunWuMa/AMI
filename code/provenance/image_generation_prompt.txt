@@ -1,0 +1,34 @@
+Historical figure-prototyping prompt (not the final scientific specification). The interim component split in the prompt below was not included in the final scientific figure. Final analyses use one unified Local100 cohort (100 outcome-observed patients, 46 events; 116 eligible). The split does not represent independent validation cohorts. The original prompt is preserved verbatim below for transparency.
+
+--- BEGIN HISTORICAL PROMPT ---
+
+Use case: infographic-diagram. Create a publication-quality scientific study framework figure for a medical informatics research article, full English text, crisp clean flat vector-like scientific illustration on pure white, landscape 4:3, high resolution, restrained navy blue #285F87, teal #16817A, muted orange #BD7941. Thin consistent strokes, Arial-like typography, 3 clearly separated horizontal panels labelled a, b, c, generous whitespace, aligned grid. This is an evaluation framework, NOT a neural network or a novel algorithm. Use purposeful small line icons (hospital, EHR database, test tubes, calendar, locked model, magnifier), no decorative art, no gradients, no shadow, no logos. Text must be exactly spelled and readable. Do NOT invent curves, numerical results or scatter plots.
+
+Panel a, top 22%: title "a  Shared prediction task". A three-stage horizontal clinical timeline, small patient/hospital icon on left, blood-tube/calendar icons.
+Left label "D0-1: early information", small lines "Adult primary AMI" and "All known early Hb normal".
+Middle a vertical teal prediction boundary with a small lock: "Start of D2".
+Right label "D2-7: recorded anemia", small lines "Among patients with future Hb" and "Before discharge or recorded death".
+A concise note below timeline: "No future Hb = unknown conditional label".
+These D numbers are calendar days, not exact elapsed hours.
+
+Panel b, middle 46%: title "b  Public development and frozen cross-setting evaluation".
+Left upper database icon and card: "MIMIC-IV 2.2"; "Training n = 1,107"; "Calibration n = 369".
+Left lower three stacked slim model strips, labelled:
+"M1  Age + sex + Hb margin"
+"M2  M1 + seven laboratory values"
+"M3  M2 + observation days + missingness"
+small single line beneath "Logistic regression".
+Arrow from development/model area to centered padlock card labelled "FREEZE", with three lines "Preprocessing", "Model coefficients", "Public calibration".
+After the lock, arrows split to TWO evaluation cards on the right:
+Upper blue card, small database icon: "Public test"; "370 observed / 168 events".
+Lower teal card, small hospital icon: "Local hospital"; "100 observed / 46 events"; "116 eligible; 16 unobserved".
+Small note under local card "Original 74 + additional 26".
+No arrow from local hospital to development or freeze. Direction is development -> freeze -> each evaluation cohort. M1 M2 M3 are three independently fitted nested-feature models, NOT a sequential ensemble; model strips should not have chain arrows between them.
+
+Panel c, bottom 27%: title "c  Reliability assessment and explanatory analyses".
+Three equally sized compact cards with small simple line icons:
+Blue card "Primary evaluation"; lines "M3 vs M2; M1 benchmark", "Discrimination: AUROC", "Probability error: Brier", "Calibration: level and slope".
+Teal card "Explanatory analyses"; lines "Care composition: CABG / PCI", "Observation-feature encoding", "Future Hb observation", "Conditional vs joint event".
+Muted orange card "Supporting analyses"; lines "Outcome and time-window checks", "Imputation and continuous Hb", "Record sampling and subgroups", "Local updating assessed separately".
+Footer small but legible: "Retrospective evaluation; explanatory analyses are exploratory."
+Ensure no fabricated clinical conclusions, no treatment arrows, no neural network imagery, no actual ROC curves or performance graphs. The figure shows how the study is evaluated, not its results. Aim for a polished scientific journal schematic, not a business presentation.

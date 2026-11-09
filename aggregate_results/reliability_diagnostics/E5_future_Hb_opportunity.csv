@@ -1,0 +1,49 @@
+﻿cohort,group,variable,time_basis,N,nonmissing,missing,mean,sd,median,q25,q75,positive,denominator_observed,percent_observed
+Public,All eligible,remaining_calendar_days_after_D2,Specimen calendar date,1934,1934,0,3.231644260599793,5.073603282644276,1.0,0.0,5.0,,,
+Public,All eligible,potential_D2_D7_calendar_dates,Specimen calendar date,1934,1934,0,3.1670113753877973,2.025580757702609,2.0,1.0,6.0,,,
+Public,All eligible,any_future_hb,Specimen calendar date,1934,1934,0,0.954498448810755,0.20845533885121798,1.0,1.0,1.0,1846.0,1934.0,95.44984488107549
+Public,All eligible,first_on_D2,Specimen calendar date,1934,1934,0,0.8929679420889348,0.3092339583212003,1.0,1.0,1.0,1727.0,1934.0,89.29679420889349
+Public,All eligible,first_on_D3,Specimen calendar date,1934,1934,0,0.04395036194415719,0.20503771653437003,0.0,0.0,0.0,85.0,1934.0,4.395036194415719
+Public,All eligible,first_on_D4_D7,Specimen calendar date,1934,1934,0,0.017580144777662874,0.13145348282451458,0.0,0.0,0.0,34.0,1934.0,1.7580144777662874
+Public,All eligible,derived_future_days,Specimen calendar date,1934,1934,0,2.8381592554291624,1.9399073378744827,2.0,1.0,5.0,,,
+Public,All eligible,derived_future_rows,Specimen calendar date,1934,1934,0,3.4446742502585317,2.974245385893435,2.0,1.0,5.75,,,
+Public,Future Hb observed,remaining_calendar_days_after_D2,Specimen calendar date,1846,1846,0,3.3672806067172263,5.146998164723501,1.0,0.0,5.0,,,
+Public,Future Hb observed,potential_D2_D7_calendar_dates,Specimen calendar date,1846,1846,0,3.2546045503791983,2.023752700451909,2.0,1.0,6.0,,,
+Public,Future Hb observed,any_future_hb,Specimen calendar date,1846,1846,0,1.0,0.0,1.0,1.0,1.0,1846.0,1846.0,100.0
+Public,Future Hb observed,first_on_D2,Specimen calendar date,1846,1846,0,0.9355362946912242,0.24564369184497742,1.0,1.0,1.0,1727.0,1846.0,93.55362946912243
+Public,Future Hb observed,first_on_D3,Specimen calendar date,1846,1846,0,0.04604550379198267,0.20964046158013544,0.0,0.0,0.0,85.0,1846.0,4.604550379198267
+Public,Future Hb observed,first_on_D4_D7,Specimen calendar date,1846,1846,0,0.018418201516793065,0.13449449903304805,0.0,0.0,0.0,34.0,1846.0,1.8418201516793065
+Public,Future Hb observed,derived_future_days,Specimen calendar date,1846,1846,0,2.973456121343445,1.8815462922381463,2.0,1.0,5.0,,,
+Public,Future Hb observed,derived_future_rows,Specimen calendar date,1846,1846,0,3.6088840736728063,2.945357313220779,2.0,1.0,6.0,,,
+Public,Future Hb unobserved,remaining_calendar_days_after_D2,Specimen calendar date,88,88,0,0.38636363636363635,1.2450529064308504,0.0,0.0,0.0,,,
+Public,Future Hb unobserved,potential_D2_D7_calendar_dates,Specimen calendar date,88,88,0,1.3295454545454546,0.8539508035722136,1.0,1.0,1.0,,,
+Public,Future Hb unobserved,any_future_hb,Specimen calendar date,88,88,0,0.0,0.0,0.0,0.0,0.0,0.0,88.0,0.0
+Public,Future Hb unobserved,first_on_D2,Specimen calendar date,88,88,0,0.0,0.0,0.0,0.0,0.0,0.0,88.0,0.0
+Public,Future Hb unobserved,first_on_D3,Specimen calendar date,88,88,0,0.0,0.0,0.0,0.0,0.0,0.0,88.0,0.0
+Public,Future Hb unobserved,first_on_D4_D7,Specimen calendar date,88,88,0,0.0,0.0,0.0,0.0,0.0,0.0,88.0,0.0
+Public,Future Hb unobserved,derived_future_days,Specimen calendar date,88,88,0,0.0,0.0,0.0,0.0,0.0,,,
+Public,Future Hb unobserved,derived_future_rows,Specimen calendar date,88,88,0,0.0,0.0,0.0,0.0,0.0,,,
+Local,All eligible,remaining_calendar_days_after_D2,Report calendar date,116,116,0,5.4655172413793105,3.5860382269180486,5.0,3.0,7.0,,,
+Local,All eligible,potential_D2_D7_calendar_dates,Report calendar date,116,116,0,4.982758620689655,1.2852525288706953,6.0,4.0,6.0,,,
+Local,All eligible,any_future_hb,Report calendar date,116,116,0,0.8620689655172413,0.34632359143582414,1.0,1.0,1.0,100.0,116.0,86.20689655172413
+Local,All eligible,first_on_D2,Report calendar date,116,116,0,0.25862068965517243,0.4397764185933859,0.0,0.0,1.0,30.0,116.0,25.862068965517242
+Local,All eligible,first_on_D3,Report calendar date,116,116,0,0.22413793103448276,0.41882250877080807,0.0,0.0,0.0,26.0,116.0,22.413793103448278
+Local,All eligible,first_on_D4_D7,Report calendar date,116,116,0,0.3793103448275862,0.48732048938077155,0.0,0.0,1.0,44.0,116.0,37.93103448275862
+Local,All eligible,derived_future_days,Report calendar date,116,116,0,1.3189655172413792,0.8086396298565343,1.0,1.0,2.0,,,
+Local,All eligible,derived_future_rows,Report calendar date,116,116,0,1.3448275862068966,0.8454836359804035,1.0,1.0,2.0,,,
+Local,Future Hb observed,remaining_calendar_days_after_D2,Report calendar date,100,100,0,5.76,3.626836003176792,5.0,3.0,7.0,,,
+Local,Future Hb observed,potential_D2_D7_calendar_dates,Report calendar date,100,100,0,5.13,1.1516786167866613,6.0,4.0,6.0,,,
+Local,Future Hb observed,any_future_hb,Report calendar date,100,100,0,1.0,0.0,1.0,1.0,1.0,100.0,100.0,100.0
+Local,Future Hb observed,first_on_D2,Report calendar date,100,100,0,0.3,0.4605661864718381,0.0,0.0,1.0,30.0,100.0,30.0
+Local,Future Hb observed,first_on_D3,Report calendar date,100,100,0,0.26,0.440844002276808,0.0,0.0,1.0,26.0,100.0,26.0
+Local,Future Hb observed,first_on_D4_D7,Report calendar date,100,100,0,0.44,0.4988876515698589,0.0,0.0,1.0,44.0,100.0,44.0
+Local,Future Hb observed,derived_future_days,Report calendar date,100,100,0,1.53,0.6583573068132107,1.0,1.0,2.0,,,
+Local,Future Hb observed,derived_future_rows,Report calendar date,100,100,0,1.56,0.7009373233842886,1.0,1.0,2.0,,,
+Local,Future Hb unobserved,remaining_calendar_days_after_D2,Report calendar date,16,16,0,3.625,2.753785273643051,3.0,1.75,5.0,,,
+Local,Future Hb unobserved,potential_D2_D7_calendar_dates,Report calendar date,16,16,0,4.0625,1.691892431568863,4.0,2.75,6.0,,,
+Local,Future Hb unobserved,any_future_hb,Report calendar date,16,16,0,0.0,0.0,0.0,0.0,0.0,0.0,16.0,0.0
+Local,Future Hb unobserved,first_on_D2,Report calendar date,16,16,0,0.0,0.0,0.0,0.0,0.0,0.0,16.0,0.0
+Local,Future Hb unobserved,first_on_D3,Report calendar date,16,16,0,0.0,0.0,0.0,0.0,0.0,0.0,16.0,0.0
+Local,Future Hb unobserved,first_on_D4_D7,Report calendar date,16,16,0,0.0,0.0,0.0,0.0,0.0,0.0,16.0,0.0
+Local,Future Hb unobserved,derived_future_days,Report calendar date,16,16,0,0.0,0.0,0.0,0.0,0.0,,,
+Local,Future Hb unobserved,derived_future_rows,Report calendar date,16,16,0,0.0,0.0,0.0,0.0,0.0,,,

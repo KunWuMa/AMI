@@ -1,0 +1,46 @@
+feature,definition,availability,future_information_permitted
+age,Age capped at 90,known before beginning calendar D2,False
+any_n_days_alb,One if at least one early day observed,known before beginning calendar D2,False
+any_n_days_cr,One if at least one early day observed,known before beginning calendar D2,False
+any_n_days_glucose,One if at least one early day observed,known before beginning calendar D2,False
+any_n_days_hb,One if at least one early day observed,known before beginning calendar D2,False
+any_n_days_k,One if at least one early day observed,known before beginning calendar D2,False
+any_n_days_na,One if at least one early day observed,known before beginning calendar D2,False
+any_n_days_platelet,One if at least one early day observed,known before beginning calendar D2,False
+any_n_days_wbc,One if at least one early day observed,known before beginning calendar D2,False
+delta_hb,First-to-latest early Hb change,known before beginning calendar D2,False
+last_alb,Latest known early-day median,known before beginning calendar D2,False
+last_cr,Latest known early-day median,known before beginning calendar D2,False
+last_glucose,Latest known early-day median,known before beginning calendar D2,False
+last_k,Latest known early-day median,known before beginning calendar D2,False
+last_margin,Latest early Hb minus 130 g/L for men or 120 g/L for women,known before beginning calendar D2,False
+last_na,Latest known early-day median,known before beginning calendar D2,False
+last_platelet,Latest known early-day median,known before beginning calendar D2,False
+last_wbc,Latest known early-day median,known before beginning calendar D2,False
+male,Recorded male sex indicator,known before beginning calendar D2,False
+missing_age,One if physiological input is unavailable,known before beginning calendar D2,False
+missing_last_alb,One if physiological input is unavailable,known before beginning calendar D2,False
+missing_last_cr,One if physiological input is unavailable,known before beginning calendar D2,False
+missing_last_glucose,One if physiological input is unavailable,known before beginning calendar D2,False
+missing_last_k,One if physiological input is unavailable,known before beginning calendar D2,False
+missing_last_margin,One if physiological input is unavailable,known before beginning calendar D2,False
+missing_last_na,One if physiological input is unavailable,known before beginning calendar D2,False
+missing_last_platelet,One if physiological input is unavailable,known before beginning calendar D2,False
+missing_last_wbc,One if physiological input is unavailable,known before beginning calendar D2,False
+missing_male,One if physiological input is unavailable,known before beginning calendar D2,False
+n_days_alb,Number of distinct early observation days (0/1/2),known before beginning calendar D2,False
+n_days_cr,Number of distinct early observation days (0/1/2),known before beginning calendar D2,False
+n_days_glucose,Number of distinct early observation days (0/1/2),known before beginning calendar D2,False
+n_days_hb,Number of distinct early observation days (0/1/2),known before beginning calendar D2,False
+n_days_k,Number of distinct early observation days (0/1/2),known before beginning calendar D2,False
+n_days_na,Number of distinct early observation days (0/1/2),known before beginning calendar D2,False
+n_days_platelet,Number of distinct early observation days (0/1/2),known before beginning calendar D2,False
+n_days_wbc,Number of distinct early observation days (0/1/2),known before beginning calendar D2,False
+repeat_n_days_alb,One if at least two early days observed,known before beginning calendar D2,False
+repeat_n_days_cr,One if at least two early days observed,known before beginning calendar D2,False
+repeat_n_days_glucose,One if at least two early days observed,known before beginning calendar D2,False
+repeat_n_days_hb,One if at least two early days observed,known before beginning calendar D2,False
+repeat_n_days_k,One if at least two early days observed,known before beginning calendar D2,False
+repeat_n_days_na,One if at least two early days observed,known before beginning calendar D2,False
+repeat_n_days_platelet,One if at least two early days observed,known before beginning calendar D2,False
+repeat_n_days_wbc,One if at least two early days observed,known before beginning calendar D2,False

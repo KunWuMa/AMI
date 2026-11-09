@@ -1,0 +1,9 @@
+﻿cohort,group,model,N,events,event_fraction,mean_prediction,Brier,interpretation
+Public_all_observed,CABG,M2_routine_LR,379,367,0.9683377308707124,0.46083466445451277,0.31066938879096107,Descriptive mixed development/calibration/test sample
+Public_all_observed,CABG,M3_observation_LR,379,367,0.9683377308707124,0.580934000663816,0.21815198469464128,Descriptive mixed development/calibration/test sample
+Public_all_observed,No CABG code,M2_routine_LR,1467,472,0.321745057941377,0.4574432089134655,0.1913900132163241,Descriptive mixed development/calibration/test sample
+Public_all_observed,No CABG code,M3_observation_LR,1467,472,0.321745057941377,0.42351606329233416,0.18660447503178432,Descriptive mixed development/calibration/test sample
+Public_test,CABG,M2_routine_LR,80,78,0.975,0.43737663585416897,0.3418998440035783,Held-out test sample
+Public_test,CABG,M3_observation_LR,80,78,0.975,0.5626800328447205,0.24239390532039592,Held-out test sample
+Public_test,No CABG code,M2_routine_LR,290,90,0.3103448275862069,0.4397581587805309,0.18953055604191296,Held-out test sample
+Public_test,No CABG code,M3_observation_LR,290,90,0.3103448275862069,0.4078247374350903,0.18740311729511788,Held-out test sample

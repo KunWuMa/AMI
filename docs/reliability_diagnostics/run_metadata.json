@@ -1,0 +1,21 @@
+{
+  "analysis_date": "2026-11-05",
+  "type": "post-hoc frozen analyses",
+  "execution_order": [
+    "E1",
+    "E3",
+    "E2",
+    "E4",
+    "E5"
+  ],
+  "new_random_resampling": false,
+  "reused_bootstrap_seeds": [
+    20261022,
+    20261023
+  ],
+  "python": "3.12.4",
+  "pandas": "2.2.2",
+  "numpy": "1.26.4",
+  "primary_models_refitted": false,
+  "current_manuscript_modified": false
+}

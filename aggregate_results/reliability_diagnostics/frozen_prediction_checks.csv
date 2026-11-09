@@ -1,0 +1,10 @@
+﻿check,maximum_absolute_error,passed
+Public_test M1_clinical frozen probability,8.326672684688674e-17,True
+Public_test M2_routine_LR frozen probability,1.1102230246251565e-16,True
+Public_test M3_observation_LR frozen probability,1.1102230246251565e-16,True
+Public_test M4_routine_GB frozen probability,8.326672684688674e-17,True
+Local100 M1_clinical frozen probability,8.326672684688674e-17,True
+Local100 M2_routine_LR frozen probability,8.326672684688674e-17,True
+Local100 M3_observation_LR frozen probability,1.1102230246251565e-16,True
+Local100 M4_routine_GB frozen probability,5.551115123125783e-17,True
+Local116 O3 frozen probability,1.1102230246251565e-16,True

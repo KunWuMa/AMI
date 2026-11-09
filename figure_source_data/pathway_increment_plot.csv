@@ -1,0 +1,4 @@
+comparison,n,events,M2_auc,M3_auc,cohort,model,baseline,metric,difference,low,high,valid_resamples,B,posthoc
+Full test / Original models,370,168,0.6837281942479962,0.7639085337105139,MIMIC_test,M3_observation_LR,M2_routine_LR,delta_auc,0.0801803394625176,0.0384495174284118,0.1203506729307925,1000,1000,True
+Non-CABG test / Original models,290,90,0.7703888888888889,0.7609444444444444,Public_nonCABG_frozen,M3_observation_LR,M2_routine_LR,delta_auc,-0.0094444444444444,-0.0509679330858626,0.0311256269949841,1000,1000,True
+Non-CABG test / Redeveloped models,290,90,0.8075,0.8025555555555556,MIMIC_test_no_CABG,M3_observation_LR,M2_routine_LR,delta_auc,-0.0049444444444444,-0.021725697050866,0.0121979481087228,1000,1000,True

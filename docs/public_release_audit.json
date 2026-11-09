@@ -1,0 +1,672 @@
+{
+  "passed": true,
+  "file_counts": {
+    "python": 51,
+    "csv": 44,
+    "pdf": 11
+  },
+  "issues": [],
+  "csv_schemas": [
+    {
+      "file": "release_manifest.csv",
+      "rows": 133,
+      "columns": [
+        "file",
+        "bytes",
+        "sha256"
+      ]
+    },
+    {
+      "file": "aggregate_results/cohort_flow.csv",
+      "rows": 2,
+      "columns": [
+        "cohort",
+        "at_D2",
+        "early_uncertain",
+        "normal_early_eligible",
+        "observed",
+        "events",
+        "unknown",
+        "early_two_days_in_observed",
+        "moderate_lt110",
+        "drop20"
+      ]
+    },
+    {
+      "file": "aggregate_results/cohort_summary_main.csv",
+      "rows": 9,
+      "columns": [
+        "variable",
+        "label",
+        "Public_AMI",
+        "Public_test",
+        "Local_AMI"
+      ]
+    },
+    {
+      "file": "aggregate_results/conditional_fixed_model_intervals.csv",
+      "rows": 56,
+      "columns": [
+        "cohort",
+        "model",
+        "metric",
+        "point",
+        "low",
+        "high",
+        "valid_resamples",
+        "B"
+      ]
+    },
+    {
+      "file": "aggregate_results/conditional_fixed_model_metrics.csv",
+      "rows": 28,
+      "columns": [
+        "cohort",
+        "model",
+        "n",
+        "events",
+        "prevalence",
+        "mean_prediction",
+        "auc",
+        "AP",
+        "Brier",
+        "calibration_intercept",
+        "calibration_slope"
+      ]
+    },
+    {
+      "file": "aggregate_results/conditional_fixed_paired_differences.csv",
+      "rows": 32,
+      "columns": [
+        "cohort",
+        "model",
+        "baseline",
+        "metric",
+        "difference",
+        "low",
+        "high",
+        "B"
+      ]
+    },
+    {
+      "file": "aggregate_results/feature_dictionary.csv",
+      "rows": 45,
+      "columns": [
+        "feature",
+        "definition",
+        "availability",
+        "future_information_permitted"
+      ]
+    },
+    {
+      "file": "aggregate_results/model_dictionary.csv",
+      "rows": 24,
+      "columns": [
+        "model",
+        "display_model",
+        "target",
+        "features",
+        "nominal_input_count",
+        "algorithm",
+        "development",
+        "calibration",
+        "analysis_role"
+      ]
+    },
+    {
+      "file": "aggregate_results/nonCABG_redevelopment_intervals.csv",
+      "rows": 30,
+      "columns": [
+        "cohort",
+        "model",
+        "metric",
+        "point",
+        "low",
+        "high",
+        "valid_resamples",
+        "B",
+        "conditional_on_fitted_models"
+      ]
+    },
+    {
+      "file": "aggregate_results/nonCABG_redevelopment_paired.csv",
+      "rows": 12,
+      "columns": [
+        "cohort",
+        "model",
+        "baseline",
+        "metric",
+        "difference",
+        "low",
+        "high",
+        "valid_resamples",
+        "B",
+        "posthoc"
+      ]
+    },
+    {
+      "file": "aggregate_results/public_analysis_provenance.csv",
+      "rows": 11,
+      "columns": [
+        "file",
+        "source_file",
+        "role",
+        "rows"
+      ]
+    },
+    {
+      "file": "aggregate_results/public_nonCABG_frozen_intervals.csv",
+      "rows": 10,
+      "columns": [
+        "cohort",
+        "model",
+        "metric",
+        "point",
+        "low",
+        "high",
+        "valid_resamples",
+        "B",
+        "conditional_on_fitted_models"
+      ]
+    },
+    {
+      "file": "aggregate_results/public_nonCABG_frozen_metrics.csv",
+      "rows": 5,
+      "columns": [
+        "cohort",
+        "model",
+        "n",
+        "events",
+        "prevalence",
+        "mean_prediction",
+        "auc",
+        "AP",
+        "Brier",
+        "calibration_intercept",
+        "calibration_slope"
+      ]
+    },
+    {
+      "file": "aggregate_results/public_nonCABG_frozen_paired.csv",
+      "rows": 10,
+      "columns": [
+        "cohort",
+        "model",
+        "baseline",
+        "metric",
+        "difference",
+        "low",
+        "high",
+        "valid_resamples",
+        "B",
+        "posthoc"
+      ]
+    },
+    {
+      "file": "aggregate_results/public_pathway_composition.csv",
+      "rows": 12,
+      "columns": [
+        "population",
+        "pathway",
+        "n",
+        "O_observed",
+        "events",
+        "conditional_event_fraction",
+        "observation_fraction"
+      ]
+    },
+    {
+      "file": "aggregate_results/unchanged_public_nonCABG_model_metrics.csv",
+      "rows": 12,
+      "columns": [
+        "experiment",
+        "model",
+        "cohort",
+        "version",
+        "n",
+        "events",
+        "prevalence",
+        "mean_prediction",
+        "auc",
+        "AP",
+        "Brier",
+        "calibration_intercept",
+        "calibration_slope"
+      ]
+    },
+    {
+      "file": "figure_source_data/albumin_availability_counts.csv",
+      "rows": 2,
+      "columns": [
+        "cohort",
+        "n",
+        "albumin_measured",
+        "albumin_missing"
+      ]
+    },
+    {
+      "file": "figure_source_data/calibration_M1_M2_M3.csv",
+      "rows": 30,
+      "columns": [
+        "cohort",
+        "model",
+        "prediction",
+        "observed",
+        "n",
+        "events",
+        "low",
+        "high"
+      ]
+    },
+    {
+      "file": "figure_source_data/continuous_error_intervals.csv",
+      "rows": 30,
+      "columns": [
+        "target",
+        "model",
+        "metric",
+        "point",
+        "low",
+        "high"
+      ]
+    },
+    {
+      "file": "figure_source_data/main_representation_Brier_plot.csv",
+      "rows": 2,
+      "columns": [
+        "label",
+        "cohort",
+        "model",
+        "baseline",
+        "metric",
+        "difference",
+        "low",
+        "high",
+        "B"
+      ]
+    },
+    {
+      "file": "figure_source_data/main_representation_performance.csv",
+      "rows": 8,
+      "columns": [
+        "cohort",
+        "model",
+        "n",
+        "events",
+        "mean_prediction",
+        "prevalence",
+        "mean_error_pp",
+        "auc",
+        "auc_low",
+        "auc_high",
+        "Brier"
+      ]
+    },
+    {
+      "file": "figure_source_data/observation_joint_probabilities.csv",
+      "rows": 6,
+      "columns": [
+        "cohort",
+        "task",
+        "model",
+        "n",
+        "events",
+        "prevalence",
+        "mean_prediction",
+        "auc",
+        "AP",
+        "Brier",
+        "calibration_intercept",
+        "calibration_slope"
+      ]
+    },
+    {
+      "file": "figure_source_data/pathway_anemia_bar_counts.csv",
+      "rows": 3,
+      "columns": [
+        "population",
+        "pathway",
+        "n",
+        "events",
+        "fraction"
+      ]
+    },
+    {
+      "file": "figure_source_data/pathway_increment_plot.csv",
+      "rows": 3,
+      "columns": [
+        "comparison",
+        "n",
+        "events",
+        "M2_auc",
+        "M3_auc",
+        "cohort",
+        "model",
+        "baseline",
+        "metric",
+        "difference",
+        "low",
+        "high",
+        "valid_resamples",
+        "B",
+        "posthoc"
+      ]
+    },
+    {
+      "file": "figure_source_data/pathway_test_event_shares.csv",
+      "rows": 2,
+      "columns": [
+        "population",
+        "denominator",
+        "CABG_n",
+        "all_n",
+        "CABG_fraction"
+      ]
+    },
+    {
+      "file": "figure_source_data/ROC_coordinates.csv",
+      "rows": 2680,
+      "columns": [
+        "cohort",
+        "model",
+        "fpr",
+        "tpr"
+      ]
+    },
+    {
+      "file": "figure_source_data/sensitivity_increment_intervals.csv",
+      "rows": 8,
+      "columns": [
+        "cohort",
+        "model",
+        "baseline",
+        "metric",
+        "difference",
+        "low",
+        "high",
+        "B"
+      ]
+    },
+    {
+      "file": "aggregate_results/reliability_diagnostics/E1_cohort_selection_summary.csv",
+      "rows": 94,
+      "columns": [
+        "analysis",
+        "group",
+        "variable",
+        "type",
+        "SMD_A_minus_B",
+        "N",
+        "nonmissing",
+        "missing",
+        "mean",
+        "sd",
+        "median",
+        "q25",
+        "q75",
+        "positive",
+        "denominator_observed",
+        "percent_observed"
+      ]
+    },
+    {
+      "file": "aggregate_results/reliability_diagnostics/E1_exclusion_reasons.csv",
+      "rows": 3,
+      "columns": [
+        "exclusion_reason",
+        "n"
+      ]
+    },
+    {
+      "file": "aggregate_results/reliability_diagnostics/E1_future_Hb_observation_groups.csv",
+      "rows": 204,
+      "columns": [
+        "analysis",
+        "group",
+        "variable",
+        "type",
+        "SMD_A_minus_B",
+        "N",
+        "nonmissing",
+        "missing",
+        "mean",
+        "sd",
+        "median",
+        "q25",
+        "q75",
+        "positive",
+        "denominator_observed",
+        "percent_observed"
+      ]
+    },
+    {
+      "file": "aggregate_results/reliability_diagnostics/E2_cross_setting_observation_features.csv",
+      "rows": 136,
+      "columns": [
+        "analysis",
+        "group",
+        "variable",
+        "type",
+        "SMD_A_minus_B",
+        "N",
+        "nonmissing",
+        "missing",
+        "mean",
+        "sd",
+        "median",
+        "q25",
+        "q75",
+        "positive",
+        "denominator_observed",
+        "percent_observed"
+      ]
+    },
+    {
+      "file": "aggregate_results/reliability_diagnostics/E2_public_CABG_case_mix.csv",
+      "rows": 148,
+      "columns": [
+        "analysis",
+        "group",
+        "variable",
+        "type",
+        "SMD_A_minus_B",
+        "N",
+        "nonmissing",
+        "missing",
+        "mean",
+        "sd",
+        "median",
+        "q25",
+        "q75",
+        "positive",
+        "denominator_observed",
+        "percent_observed"
+      ]
+    },
+    {
+      "file": "aggregate_results/reliability_diagnostics/E2_public_CABG_prediction_summary.csv",
+      "rows": 8,
+      "columns": [
+        "cohort",
+        "group",
+        "model",
+        "N",
+        "events",
+        "event_fraction",
+        "mean_prediction",
+        "Brier",
+        "interpretation"
+      ]
+    },
+    {
+      "file": "aggregate_results/reliability_diagnostics/E3_existing_paired_differences.csv",
+      "rows": 2,
+      "columns": [
+        "cohort",
+        "model",
+        "baseline",
+        "metric",
+        "difference",
+        "low",
+        "high",
+        "B"
+      ]
+    },
+    {
+      "file": "aggregate_results/reliability_diagnostics/E3_probability_reference_calibration.csv",
+      "rows": 8,
+      "columns": [
+        "cohort",
+        "model",
+        "n",
+        "events",
+        "prevalence",
+        "mean_prediction",
+        "auc",
+        "AP",
+        "Brier",
+        "calibration_intercept",
+        "calibration_slope",
+        "p_ref",
+        "Brier_ref",
+        "BSS",
+        "expected_events",
+        "observed_events",
+        "expected_observed_ratio",
+        "calibration_intercept_low",
+        "calibration_intercept_high",
+        "calibration_intercept_B",
+        "calibration_intercept_valid_fits",
+        "calibration_slope_low",
+        "calibration_slope_high",
+        "calibration_slope_B",
+        "calibration_slope_valid_fits",
+        "reference_type"
+      ]
+    },
+    {
+      "file": "aggregate_results/reliability_diagnostics/E4_decomposition_checks.csv",
+      "rows": 2,
+      "columns": [
+        "cohort",
+        "N",
+        "max_abs_probability_reconstruction_error",
+        "clipped_patients",
+        "passed"
+      ]
+    },
+    {
+      "file": "aggregate_results/reliability_diagnostics/E4_frozen_M3_calibration_transform.csv",
+      "rows": 1,
+      "columns": [
+        "raw_intercept",
+        "calibration_intercept",
+        "calibration_slope",
+        "raw_probability_clip_lower",
+        "raw_probability_clip_upper",
+        "combined_intercept"
+      ]
+    },
+    {
+      "file": "aggregate_results/reliability_diagnostics/E4_frozen_M3_coefficients.csv",
+      "rows": 28,
+      "columns": [
+        "feature",
+        "category",
+        "meaning",
+        "unit_or_encoding",
+        "standardized_coefficient",
+        "training_imputation_median",
+        "training_scaler_mean",
+        "training_scaler_scale",
+        "imputation_rule",
+        "calibrated_log_odds_coefficient"
+      ]
+    },
+    {
+      "file": "aggregate_results/reliability_diagnostics/E4_observation_pattern_risk_summary.csv",
+      "rows": 8,
+      "columns": [
+        "cohort",
+        "pattern",
+        "value",
+        "N",
+        "nonmissing",
+        "missing",
+        "mean",
+        "sd",
+        "median",
+        "q25",
+        "q75",
+        "interpretation"
+      ]
+    },
+    {
+      "file": "aggregate_results/reliability_diagnostics/E4_prediction_contributions_by_setting.csv",
+      "rows": 76,
+      "columns": [
+        "cohort",
+        "scale",
+        "component",
+        "N",
+        "nonmissing",
+        "missing",
+        "mean",
+        "sd",
+        "median",
+        "q25",
+        "q75"
+      ]
+    },
+    {
+      "file": "aggregate_results/reliability_diagnostics/E5_frozen_count_checks.csv",
+      "rows": 4,
+      "columns": [
+        "cohort",
+        "check",
+        "maximum_absolute_error",
+        "passed"
+      ]
+    },
+    {
+      "file": "aggregate_results/reliability_diagnostics/E5_future_Hb_opportunity.csv",
+      "rows": 48,
+      "columns": [
+        "cohort",
+        "group",
+        "variable",
+        "time_basis",
+        "N",
+        "nonmissing",
+        "missing",
+        "mean",
+        "sd",
+        "median",
+        "q25",
+        "q75",
+        "positive",
+        "denominator_observed",
+        "percent_observed"
+      ]
+    },
+    {
+      "file": "aggregate_results/reliability_diagnostics/frozen_prediction_checks.csv",
+      "rows": 9,
+      "columns": [
+        "check",
+        "maximum_absolute_error",
+        "passed"
+      ]
+    },
+    {
+      "file": "aggregate_results/reliability_diagnostics/quality_control_summary.csv",
+      "rows": 67,
+      "columns": [
+        "check",
+        "passed",
+        "detail"
+      ]
+    }
+  ],
+  "scope": "Static schemas, syntax, identifier-like literals, credential patterns, workstation paths, PDF text/metadata/attachments. Curated aggregate-only inputs; no model execution."
+}

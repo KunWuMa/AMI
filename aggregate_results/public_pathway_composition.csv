@@ -1,0 +1,13 @@
+population,pathway,n,O_observed,events,conditional_event_fraction,observation_fraction
+all_eligible,CABG,380,379,367,0.9683377308707124,0.9973684210526316
+all_eligible,PCI_without_CABG,1085,1024,317,0.3095703125,0.943778801843318
+all_eligible,no_CABG_or_PCI_code,469,443,155,0.34988713318284426,0.9445628997867804
+all_eligible,all,1934,1846,839,0.45449620801733476,0.954498448810755
+all_observed,CABG,379,379,367,0.9683377308707124,1.0
+all_observed,PCI_without_CABG,1024,1024,317,0.3095703125,1.0
+all_observed,no_CABG_or_PCI_code,443,443,155,0.34988713318284426,1.0
+all_observed,all,1846,1846,839,0.45449620801733476,1.0
+test_observed,CABG,80,80,78,0.975,1.0
+test_observed,PCI_without_CABG,205,205,65,0.3170731707317073,1.0
+test_observed,no_CABG_or_PCI_code,85,85,25,0.29411764705882354,1.0
+test_observed,all,370,370,168,0.4540540540540541,1.0

@@ -1,0 +1,106 @@
+{
+  "main_figures": 4,
+  "main_tables": 3,
+  "supplement": {
+    "tables": [
+      {
+        "number": 1,
+        "title": "Local export and cohort flow",
+        "rows": 11
+      },
+      {
+        "number": 2,
+        "title": "Laboratory harmonization",
+        "rows": 8
+      },
+      {
+        "number": 3,
+        "title": "Early characteristics among observed patients",
+        "rows": 19
+      },
+      {
+        "number": 4,
+        "title": "All frozen conditional models and representations",
+        "rows": 28
+      },
+      {
+        "number": 5,
+        "title": "Paired ranking and probability-error differences",
+        "rows": 16
+      },
+      {
+        "number": 6,
+        "title": "Observation and joint recorded-event models",
+        "rows": 12
+      },
+      {
+        "number": 7,
+        "title": "Available local care-pathway evidence",
+        "rows": 5
+      },
+      {
+        "number": 8,
+        "title": "Definition, window and subgroup sensitivities",
+        "rows": 56
+      },
+      {
+        "number": 9,
+        "title": "Alternative public development specifications",
+        "rows": 15
+      },
+      {
+        "number": 10,
+        "title": "Continuous recorded-Hb prediction",
+        "rows": 15
+      },
+      {
+        "number": 11,
+        "title": "Observation-probability weighted sensitivity",
+        "rows": 6
+      },
+      {
+        "number": 12,
+        "title": "One-retained-result-per-day sampling",
+        "rows": 3
+      },
+      {
+        "number": 13,
+        "title": "Local calibration diagnostic uncertainty",
+        "rows": 3
+      },
+      {
+        "number": 14,
+        "title": "Exploratory local probability updating",
+        "rows": 6
+      },
+      {
+        "number": 15,
+        "title": "Dataset-origin diagnostic",
+        "rows": 4
+      },
+      {
+        "number": 16,
+        "title": "Public development-bootstrap evidence",
+        "rows": 8
+      },
+      {
+        "number": 17,
+        "title": "Public repeated-split evidence",
+        "rows": 4
+      },
+      {
+        "number": 18,
+        "title": "Illustrative public-calibration thresholds",
+        "rows": 6
+      }
+    ],
+    "figures": [
+      "FigureS1_ROC",
+      "FigureS2_calibration",
+      "FigureS3_sensitivity_increments",
+      "FigureS4_continuous_outcomes",
+      "FigureS5_observation_joint",
+      "FigureS6_population_endpoint_flow (figures/Figure1_estimand_design.pdf)"
+    ]
+  }
+}

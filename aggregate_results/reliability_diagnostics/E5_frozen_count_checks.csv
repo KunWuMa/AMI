@@ -1,0 +1,5 @@
+﻿cohort,check,maximum_absolute_error,passed
+Public,derived_future_days,0.0,True
+Public,derived_future_rows,0.0,True
+Local,derived_future_days,0.0,True
+Local,derived_future_rows,0.0,True

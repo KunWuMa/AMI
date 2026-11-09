@@ -1,0 +1,3 @@
+label,cohort,model,baseline,metric,difference,low,high,B
+A4,CAD_AMI,A4_M3_without_alb_process,M3_observation_LR,delta_Brier,-0.0360133147970112,-0.0753712097544817,0.0005669905775668,1000
+B2,CAD_AMI,B2_M3_repeat_indicators,M3_observation_LR,delta_Brier,-0.0664126905916707,-0.1119271834533106,-0.021334689646284,1000
